@@ -390,8 +390,8 @@ const App = () => {
           initialValues={{ search: '' }}
           onSubmit={async values => {
             let city = values.search
-            const forecast = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=6edc2a05cbcd95e762583867fc200b7a`)
-            const actual = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=6edc2a05cbcd95e762583867fc200b7a`)
+            const forecast = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=6edc2a05cbcd95e762583867fc200b7a`)
+            const actual = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=6edc2a05cbcd95e762583867fc200b7a`)
             //http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=6edc2a05cbcd95e762583867fc200b7a
             const forecastData = await forecast.json()
             const actualData = await actual.json()
